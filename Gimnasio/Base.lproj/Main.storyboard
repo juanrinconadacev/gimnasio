@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -18,22 +18,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gimnasio Pepe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHM-y2-ZRg">
-                                <rect key="frame" x="97.5" y="99" width="219" height="41"/>
+                                <rect key="frame" x="97.666666666666686" y="99" width="219" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-6X-ZvG" userLabel="Username">
-                                <rect key="frame" x="30" y="340" width="354" height="38.5"/>
+                                <rect key="frame" x="30" y="340" width="354" height="38.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idx-Sw-VNJ" userLabel="Password">
-                                <rect key="frame" x="30" y="428.5" width="354" height="38.5"/>
+                                <rect key="frame" x="30" y="428.66666666666669" width="354" height="38.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixH-sg-UAl">
-                                <rect key="frame" x="107" y="612" width="200" height="50"/>
+                                <rect key="frame" x="107" y="567" width="200" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="tYu-Sq-XQ0"/>
@@ -58,9 +58,11 @@
                             <constraint firstItem="idx-Sw-VNJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Och-fc-XdR"/>
                             <constraint firstItem="ixH-sg-UAl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PPc-1X-42E"/>
                             <constraint firstItem="8zm-6X-ZvG" firstAttribute="top" secondItem="lHM-y2-ZRg" secondAttribute="bottom" constant="200" id="Pgx-j6-wb8"/>
+                            <constraint firstItem="ixH-sg-UAl" firstAttribute="top" secondItem="idx-Sw-VNJ" secondAttribute="bottom" constant="100" id="Q2J-5o-kmj">
+                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8zm-6X-ZvG" secondAttribute="trailing" constant="30" id="RcD-Ev-xE8"/>
                             <constraint firstItem="lHM-y2-ZRg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2C-0J-fqJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ixH-sg-UAl" secondAttribute="bottom" constant="200" id="tUu-j9-VzW"/>
                         </constraints>
                     </view>
                     <connections>
