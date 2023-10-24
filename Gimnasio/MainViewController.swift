@@ -8,6 +8,11 @@ class MainViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var greetingLabel: UILabel!
     
+    let lessons: [Activity] = [Activity(#imageLiteral(resourceName: "yoga"), "Yoga"),
+                   Activity(#imageLiteral(resourceName: "zumba"), "Zumba"),
+                   Activity(#imageLiteral(resourceName: "pilates"), "Pilates"),
+                   Activity(#imageLiteral(resourceName: "spinning"), "Spinning")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,13 +26,17 @@ class MainViewController: UIViewController, UITableViewDataSource {
     
     // Pregunta cuantas filas hay que crear
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return lessons.count
     }
     
-    // Se lanza para crear cada fila
+    // Se lanza para crear cada fila (bucle)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("fila", indexPath.row)
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell") as! ActivityTableViewCell
+        let row = indexPath.row
+        let activity = lessons[row]
+        cell.activityLabel.text = activity.name
+        cell.activityImageView.image = activity.image
+        return cell
     }
 
 }
