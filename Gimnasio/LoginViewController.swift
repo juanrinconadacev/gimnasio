@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     }
     
     func loginOk() {
+        UserDefaults.standard.set(usernameTextField.text, forKey: "username")
         performSegue(withIdentifier: "toMainScreen", sender: nil)
     }
     
