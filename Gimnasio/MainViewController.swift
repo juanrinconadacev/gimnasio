@@ -2,16 +2,17 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var clasesTableView: UITableView!
+    @IBOutlet weak var lessonsTableView: UITableView!
     
     @IBOutlet weak var greetingLabel: UILabel!
     
-    let lessons: [Activity] = [Activity(#imageLiteral(resourceName: "yoga"), "Yoga"),
-                   Activity(#imageLiteral(resourceName: "zumba"), "Zumba"),
-                   Activity(#imageLiteral(resourceName: "pilates"), "Pilates"),
-                   Activity(#imageLiteral(resourceName: "spinning"), "Spinning")]
+    let lessons: [Lesson] = [Lesson(#imageLiteral(resourceName: "yoga"), "Yoga"),
+                   Lesson(#imageLiteral(resourceName: "zumba"), "Zumba"),
+                   Lesson(#imageLiteral(resourceName: "pilates"), "Pilates"),
+                   Lesson(#imageLiteral(resourceName: "spinning"), "Spinning")]
+    var row = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,8 @@ class MainViewController: UIViewController, UITableViewDataSource {
         greetingLabel.text = "Hola " + username + ", elige una clase:"
         
         // Lista de clases
-        clasesTableView.dataSource = self
+        lessonsTableView.dataSource = self
+        lessonsTableView.delegate = self
     }
     
     // Pregunta cuantas filas hay que crear
@@ -31,12 +33,23 @@ class MainViewController: UIViewController, UITableViewDataSource {
     
     // Se lanza para crear cada fila (bucle)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell") as! ActivityTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell") as! LessonTableViewCell
         let row = indexPath.row
-        let activity = lessons[row]
-        cell.activityLabel.text = activity.name
-        cell.activityImageView.image = activity.image
+        let lesson = lessons[row]
+        cell.lessonLabel.text = lesson.name
+        cell.lessonImageView.image = lesson.image
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        row = indexPath.row
+        performSegue(withIdentifier: "toDetailScreen", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailScreen = segue.destination as! DetailViewController
+        let lesson = lessons[row]
+        detailScreen.lessonName = lesson.name
+        detailScreen.lessonImage = lesson.image
+    }
 }

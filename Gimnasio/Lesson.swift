@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Activity {
+class Lesson {
     var image: UIImage?
     var name: String
     

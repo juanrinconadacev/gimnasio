@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yoa-i6-Hw9">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -80,14 +80,14 @@
                     <connections>
                         <outlet property="passwordTextField" destination="idx-Sw-VNJ" id="FBH-4G-VpD"/>
                         <outlet property="usernameTextField" destination="8zm-6X-ZvG" id="NrM-Vn-3H8"/>
-                        <segue destination="QfV-38-uoJ" kind="presentation" identifier="toMainScreen" modalPresentationStyle="fullScreen" id="F2l-mU-6fr"/>
+                        <segue destination="Yoa-i6-Hw9" kind="presentation" identifier="toMainScreen" modalPresentationStyle="fullScreen" id="aD8-rp-hfU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93" y="117"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Clases-->
         <scene sceneID="q9E-Zg-E7h">
             <objects>
                 <viewController id="QfV-38-uoJ" customClass="MainViewController" customModule="Gimnasio" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,16 +96,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuq-w8-C3P">
-                                <rect key="frame" x="186" y="104" width="56" height="34"/>
+                                <rect key="frame" x="186" y="148" width="56" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zgO-iE-MBa">
-                                <rect key="frame" x="20" y="158" width="388" height="714"/>
+                                <rect key="frame" x="20" y="202" width="388" height="670"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" rowHeight="99" id="8vM-Td-qxK" customClass="ActivityTableViewCell" customModule="Gimnasio" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" rowHeight="99" id="8vM-Td-qxK" customClass="LessonTableViewCell" customModule="Gimnasio" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="388" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8vM-Td-qxK" id="wK1-yO-7Ud">
@@ -135,8 +135,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="activityImageView" destination="iKy-MI-HE3" id="Eiv-ad-uzL"/>
-                                            <outlet property="activityLabel" destination="3P6-YH-cIh" id="hc6-xr-kED"/>
+                                            <outlet property="lessonImageView" destination="iKy-MI-HE3" id="Eiv-ad-uzL"/>
+                                            <outlet property="lessonLabel" destination="3P6-YH-cIh" id="hc6-xr-kED"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,26 +154,93 @@
                             <constraint firstItem="zgO-iE-MBa" firstAttribute="top" secondItem="nuq-w8-C3P" secondAttribute="bottom" constant="20" id="zoU-pR-KNj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IH9-sA-OxS"/>
+                    <navigationItem key="navigationItem" title="Clases" id="IH9-sA-OxS"/>
                     <connections>
-                        <outlet property="clasesTableView" destination="zgO-iE-MBa" id="OEV-A6-SB9"/>
                         <outlet property="greetingLabel" destination="nuq-w8-C3P" id="uc4-PA-dbr"/>
+                        <outlet property="lessonsTableView" destination="zgO-iE-MBa" id="OEV-A6-SB9"/>
+                        <segue destination="loW-6P-bzq" kind="show" identifier="toDetailScreen" id="XLe-DP-XLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3e8-FX-ncz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170.5607476635514" y="116.63066954643629"/>
+            <point key="canvasLocation" x="1670" y="117"/>
+        </scene>
+        <!--Clase-->
+        <scene sceneID="9dj-8B-CHq">
+            <objects>
+                <viewController id="loW-6P-bzq" customClass="DetailViewController" customModule="Gimnasio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZLU-Jh-fxx">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yoga" translatesAutoresizingMaskIntoConstraints="NO" id="EXx-zW-7QN">
+                                <rect key="frame" x="0.0" y="88" width="428" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Tgv-bJ-zjS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yoga" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFX-6M-Saz">
+                                <rect key="frame" x="154" y="153.66666666666666" width="120" height="68.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="labelColor"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qMF-3t-PD8"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="PFX-6M-Saz" firstAttribute="centerX" secondItem="EXx-zW-7QN" secondAttribute="centerX" id="Nex-Z1-FUM"/>
+                            <constraint firstItem="EXx-zW-7QN" firstAttribute="top" secondItem="qMF-3t-PD8" secondAttribute="top" id="Y0I-af-KF0"/>
+                            <constraint firstItem="qMF-3t-PD8" firstAttribute="trailing" secondItem="EXx-zW-7QN" secondAttribute="trailing" id="gVN-5k-sk8"/>
+                            <constraint firstItem="EXx-zW-7QN" firstAttribute="leading" secondItem="qMF-3t-PD8" secondAttribute="leading" id="kGw-LO-am8"/>
+                            <constraint firstItem="PFX-6M-Saz" firstAttribute="centerY" secondItem="EXx-zW-7QN" secondAttribute="centerY" id="rHz-Wr-yOs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Clase" id="Qo9-6c-ySB"/>
+                    <connections>
+                        <outlet property="lessonImageView" destination="EXx-zW-7QN" id="XXw-iy-sZq"/>
+                        <outlet property="lessonLabel" destination="PFX-6M-Saz" id="SgL-EV-5SO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTu-H4-Fkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2526" y="114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xuZ-PO-kgT">
+            <objects>
+                <navigationController id="Yoa-i6-Hw9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZbF-uq-E6e">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QfV-38-uoJ" kind="relationship" relationship="rootViewController" id="LFf-5I-Rbb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTC-AF-XmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="117"/>
         </scene>
     </scenes>
     <resources>
+        <image name="yoga" width="400" height="300"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
