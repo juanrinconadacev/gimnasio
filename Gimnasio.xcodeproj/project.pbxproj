@@ -17,6 +17,7 @@
 		8293331D2AD5518100F31150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8293331C2AD5518100F31150 /* Assets.xcassets */; };
 		829333202AD5518100F31150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8293331E2AD5518100F31150 /* LaunchScreen.storyboard */; };
 		82C3D4B62AF117C0002FCAED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C3D4B52AF117C0002FCAED /* DetailViewController.swift */; };
+		82C3D4BC2AF12CAD002FCAED /* LessonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C3D4BB2AF12CAD002FCAED /* LessonData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8293331F2AD5518100F31150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		829333212AD5518100F31150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82C3D4B52AF117C0002FCAED /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		82C3D4BB2AF12CAD002FCAED /* LessonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				821C270C2AE7E64A00957C02 /* LessonTableViewCell.swift */,
 				82C3D4B52AF117C0002FCAED /* DetailViewController.swift */,
 				821C27102AE7E99300957C02 /* Lesson.swift */,
+				82C3D4BB2AF12CAD002FCAED /* LessonData.swift */,
 				829333192AD5517800F31150 /* Main.storyboard */,
 				8293331C2AD5518100F31150 /* Assets.xcassets */,
 				8293331E2AD5518100F31150 /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				821C27112AE7E99300957C02 /* Lesson.swift in Sources */,
+				82C3D4BC2AF12CAD002FCAED /* LessonData.swift in Sources */,
 				829333182AD5517800F31150 /* LoginViewController.swift in Sources */,
 				829333142AD5517800F31150 /* AppDelegate.swift in Sources */,
 				821C270D2AE7E64A00957C02 /* LessonTableViewCell.swift in Sources */,

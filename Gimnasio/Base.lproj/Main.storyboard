@@ -187,19 +187,28 @@
                                 <color key="shadowColor" systemColor="labelColor"/>
                                 <size key="shadowOffset" width="3" height="3"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xZk-3f-Yfv">
+                                <rect key="frame" x="0.0" y="288" width="428" height="604"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qMF-3t-PD8"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="qMF-3t-PD8" firstAttribute="bottom" secondItem="xZk-3f-Yfv" secondAttribute="bottom" id="9JA-Si-bir"/>
+                            <constraint firstItem="qMF-3t-PD8" firstAttribute="trailing" secondItem="xZk-3f-Yfv" secondAttribute="trailing" id="MAc-B7-08M"/>
                             <constraint firstItem="PFX-6M-Saz" firstAttribute="centerX" secondItem="EXx-zW-7QN" secondAttribute="centerX" id="Nex-Z1-FUM"/>
                             <constraint firstItem="EXx-zW-7QN" firstAttribute="top" secondItem="qMF-3t-PD8" secondAttribute="top" id="Y0I-af-KF0"/>
                             <constraint firstItem="qMF-3t-PD8" firstAttribute="trailing" secondItem="EXx-zW-7QN" secondAttribute="trailing" id="gVN-5k-sk8"/>
                             <constraint firstItem="EXx-zW-7QN" firstAttribute="leading" secondItem="qMF-3t-PD8" secondAttribute="leading" id="kGw-LO-am8"/>
                             <constraint firstItem="PFX-6M-Saz" firstAttribute="centerY" secondItem="EXx-zW-7QN" secondAttribute="centerY" id="rHz-Wr-yOs"/>
+                            <constraint firstItem="xZk-3f-Yfv" firstAttribute="leading" secondItem="qMF-3t-PD8" secondAttribute="leading" id="txF-1U-0pB"/>
+                            <constraint firstItem="xZk-3f-Yfv" firstAttribute="top" secondItem="EXx-zW-7QN" secondAttribute="bottom" id="zfs-4i-yEF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Clase" id="Qo9-6c-ySB"/>
                     <connections>
+                        <outlet property="lessonDataTableView" destination="xZk-3f-Yfv" id="LwU-T7-7fb"/>
                         <outlet property="lessonImageView" destination="EXx-zW-7QN" id="XXw-iy-sZq"/>
                         <outlet property="lessonLabel" destination="PFX-6M-Saz" id="SgL-EV-5SO"/>
                     </connections>
