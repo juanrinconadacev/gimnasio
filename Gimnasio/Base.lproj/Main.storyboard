@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yoa-i6-Hw9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -206,7 +206,13 @@
                             <constraint firstItem="xZk-3f-Yfv" firstAttribute="top" secondItem="EXx-zW-7QN" secondAttribute="bottom" id="zfs-4i-yEF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Clase" id="Qo9-6c-ySB"/>
+                    <navigationItem key="navigationItem" title="Clase" id="Qo9-6c-ySB">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="xFE-dw-5bW">
+                            <connections>
+                                <segue destination="zjP-eu-9Wh" kind="show" id="W61-NR-u8o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lessonDataTableView" destination="xZk-3f-Yfv" id="LwU-T7-7fb"/>
                         <outlet property="lessonImageView" destination="EXx-zW-7QN" id="XXw-iy-sZq"/>
@@ -216,6 +222,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTu-H4-Fkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2526" y="114"/>
+        </scene>
+        <!--Añadir clase-->
+        <scene sceneID="QPF-TT-EYx">
+            <objects>
+                <viewController id="zjP-eu-9Wh" customClass="AddViewController" customModule="Gimnasio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ehd-Ul-f5t">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vfC-MF-ShP">
+                                <rect key="frame" x="30" y="188" width="368" height="470"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de la clase" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WDr-6x-KUM">
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del profesor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGK-qb-DCO">
+                                        <rect key="frame" x="0.0" y="74" width="368" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arl-0c-x48">
+                                        <rect key="frame" x="0.0" y="148" width="368" height="32.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="7" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-sl-PYA">
+                                        <rect key="frame" x="-2" y="220.33333333333331" width="372" height="31"/>
+                                        <connections>
+                                            <action selector="timeChanged:" destination="zjP-eu-9Wh" eventType="valueChanged" id="yrw-Z2-PU0"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Está llena?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q3-y4-2Tl">
+                                        <rect key="frame" x="0.0" y="290.33333333333331" width="368" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z0z-XF-kAS">
+                                        <rect key="frame" x="0.0" y="360.33333333333337" width="370" height="31"/>
+                                        <color key="onTintColor" systemColor="linkColor"/>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-fJ-hFh">
+                                        <rect key="frame" x="0.0" y="431.33333333333337" width="368" height="38.666666666666686"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Añadir">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="24" name="Arial-BoldMT"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="add:" destination="zjP-eu-9Wh" eventType="touchUpInside" id="Tch-Ox-UM8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TSw-ur-PCz"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="vfC-MF-ShP" firstAttribute="leading" secondItem="TSw-ur-PCz" secondAttribute="leading" constant="30" id="LiP-gi-wRu"/>
+                            <constraint firstAttribute="trailing" secondItem="vfC-MF-ShP" secondAttribute="trailing" constant="30" id="hZU-hn-CJa"/>
+                            <constraint firstItem="vfC-MF-ShP" firstAttribute="top" secondItem="TSw-ur-PCz" secondAttribute="top" constant="100" id="xe5-dK-axp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Añadir clase" id="7qA-of-4Jg"/>
+                    <connections>
+                        <outlet property="fullSwitch" destination="z0z-XF-kAS" id="cd1-cF-LlI"/>
+                        <outlet property="lessonNameTextField" destination="WDr-6x-KUM" id="Tcr-f9-7aQ"/>
+                        <outlet property="teacherTextField" destination="RGK-qb-DCO" id="Tnd-4C-BKh"/>
+                        <outlet property="timeLabel" destination="Arl-0c-x48" id="A9B-cs-T9V"/>
+                        <outlet property="timeSlider" destination="eUy-sl-PYA" id="LSq-mo-udt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPT-Jt-6yp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3408" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xuZ-PO-kgT">
@@ -242,11 +332,17 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -10,6 +10,7 @@
 		821C27092AE7C90900957C02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C27082AE7C90900957C02 /* MainViewController.swift */; };
 		821C270D2AE7E64A00957C02 /* LessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C270C2AE7E64A00957C02 /* LessonTableViewCell.swift */; };
 		821C27112AE7E99300957C02 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C27102AE7E99300957C02 /* Lesson.swift */; };
+		821C65A72AF391530074F745 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821C65A62AF391530074F745 /* AddViewController.swift */; };
 		829333142AD5517800F31150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829333132AD5517800F31150 /* AppDelegate.swift */; };
 		829333162AD5517800F31150 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829333152AD5517800F31150 /* SceneDelegate.swift */; };
 		829333182AD5517800F31150 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829333172AD5517800F31150 /* LoginViewController.swift */; };
@@ -24,6 +25,7 @@
 		821C27082AE7C90900957C02 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		821C270C2AE7E64A00957C02 /* LessonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewCell.swift; sourceTree = "<group>"; };
 		821C27102AE7E99300957C02 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		821C65A62AF391530074F745 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		829333102AD5517800F31150 /* Gimnasio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gimnasio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829333132AD5517800F31150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		829333152AD5517800F31150 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				821C27082AE7C90900957C02 /* MainViewController.swift */,
 				821C270C2AE7E64A00957C02 /* LessonTableViewCell.swift */,
 				82C3D4B52AF117C0002FCAED /* DetailViewController.swift */,
+				821C65A62AF391530074F745 /* AddViewController.swift */,
 				821C27102AE7E99300957C02 /* Lesson.swift */,
 				82C3D4BB2AF12CAD002FCAED /* LessonData.swift */,
 				829333192AD5517800F31150 /* Main.storyboard */,
@@ -154,6 +157,7 @@
 			files = (
 				821C27112AE7E99300957C02 /* Lesson.swift in Sources */,
 				82C3D4BC2AF12CAD002FCAED /* LessonData.swift in Sources */,
+				821C65A72AF391530074F745 /* AddViewController.swift in Sources */,
 				829333182AD5517800F31150 /* LoginViewController.swift in Sources */,
 				829333142AD5517800F31150 /* AppDelegate.swift in Sources */,
 				821C270D2AE7E64A00957C02 /* LessonTableViewCell.swift in Sources */,

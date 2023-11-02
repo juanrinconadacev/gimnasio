@@ -7,6 +7,9 @@
 
 import UIKit
 
+var ids = ["ff8081818b1b4123018b85aa6ff508dd", "ff8081818b1b4123018b85c7d5e70915", "ff8081818b1b4123018b85de0bd1095a"]
+
+
 class DetailViewController: UIViewController, UITableViewDataSource {
     
     var lessonName: String = ""
@@ -23,7 +26,9 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         lessonLabel.text = lessonName
         lessonImageView.image = lessonImage
         lessonDataTableView.dataSource = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getLessons()
     }
     
@@ -59,7 +64,6 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     }
     
     func generateURL() -> String {
-        let ids = ["ff8081818b1b4123018b85aa6ff508dd", "ff8081818b1b4123018b85c7d5e70915", "ff8081818b1b4123018b85de0bd1095a"]
         var url = "https://api.restful-api.dev/objects?"
         for id in ids {
             url += "id=" + id + "&"
